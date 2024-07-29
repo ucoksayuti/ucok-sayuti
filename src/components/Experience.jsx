@@ -11,81 +11,107 @@ import php from '../assets/php.png'
 import mongodb from '../assets/mongodb.png'
 import mysql from '../assets/mysql.png'
 import bootstrap from '../assets/bootstrap.png'
+import { motion } from "framer-motion"
 
 const Experience = () => {
+
+    const iconVariants = (duration) => ({
+        initial: { y: -10 },
+        animate: {
+            y: [10, -10],
+            transition: {
+                duration: duration,
+                ease: "linear",
+                repeat: Infinity,
+                repeatType: "reverse",
+            },
+        },
+    });
 
     const techs = [
         {
             id: 1,
             src: HTML,
             title: 'HTML',
-            style: 'shadow-orange-500'
+            style: 'shadow-orange-500',
+            motionVarian: iconVariants(2.5),
         },
         {
             id: 2,
             src: CSS,
             title: 'CSS',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(3),
         },
         {
             id: 3,
             src: Javascript,
             title: 'Javascript',
-            style: 'shadow-yellow-500'
+            style: 'shadow-yellow-500',
+            motionVarian: iconVariants(5),
         },
         {
             id: 4,
             src: python,
             title: 'Python',
-            style: 'shadow-yellow-500'
+            style: 'shadow-yellow-500',
+            motionVarian: iconVariants(2),
         },
         {
             id: 5,
             src: react,
             title: 'React Js',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(6),
         },
         {
             id: 6,
             src: express,
             title: 'Express Js',
-            style: 'shadow-gray-500'
+            style: 'shadow-gray-500',
+            motionVarian: iconVariants(4),
         },
         {
             id: 7,
             src: github,
             title: 'GitHub',
-            style: 'shadow-gray-500'
+            style: 'shadow-gray-500',
+            motionVarian: iconVariants(2.5),
         },
         {
             id: 8,
             src: tailwind,
             title: 'Tailwind',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(3),
         },
         {
             id: 9,
             src: php,
             title: 'PHP',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(5),
         },
         {
             id: 10,
             src: mongodb,
             title: 'MongoDB',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(2),
         },
         {
             id: 11,
             src: mysql,
             title: 'MySQL',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(6),
         },
         {
             id: 12,
             src: bootstrap,
             title: 'Bootstrap',
-            style: 'shadow-blue-500'
+            style: 'shadow-blue-500',
+            motionVarian: iconVariants(4),
         },
     ]
 
@@ -101,13 +127,17 @@ const Experience = () => {
                 <div className='w-full grid grid-cols-3 sm:grid-cols-6 gap-x-6 gap-y-6 text-center py-8 px-12 sm:px-0'>
 
                     {
-                        techs.map(({ id, src, title, style }) => (
-                            
-                        <div key={id} className='bg-gray-800 py-11 rounded-md grid grid-rows-2 gap-2 justify-center items-center'>
-                            <img src={src} alt="" className={ ` hover:scale-110 duration-500 w-16 mx-auto` } />
-                            <p className='mt-4'>{title}</p>
-                        </div>
-                    ))
+                        techs.map(({ id, src, title, motionVarian }) => (
+
+                            <motion.div key={id} 
+                                variants={motionVarian}
+                                initial='initial'
+                                animate='animate'
+                                className='bg-gray-800 py-11 rounded-md grid grid-rows-2 gap-2 justify-center items-center'>
+                                <img src={src} alt="" className={` hover:scale-110 duration-500 w-16 mx-auto`} />
+                                <p className='mt-4'>{title}</p>
+                            </motion.div>
+                        ))
                     }
 
 
