@@ -28,8 +28,8 @@ const Home = () => {
             name="home"
             className="h-screen w-full bg-gradient-to-b from-black via-black to-gray-800"
         >
-            <div className="max-w-screen-xl mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row md:justify-between">
-                <div className="flex flex-col justify-center h-full md:w-1/2">
+            <div className="max-w-screen-xl mx-auto flex flex-col gap-10 items-center justify-center h-full px-4 md:flex-row md:justify-between">
+                <div className="flex flex-col justify-center md:w-1/2">
                     <motion.h2 initial={{ x: -100, opacity: 0 }}
                         animate={{ x: 0, opacity: 1 }}
                         transition={{ duration: 0.7, delay: 0.5 }}
