@@ -5,6 +5,7 @@ import harmonyResort from '../assets/harmony-resort.png';
 import sweeterVocab from '../assets/sweet-vocab.png';
 import bucketList from '../assets/bucket-list.png';
 import sumaculinary from '../assets/sumaculinary.png';
+import moviecatalog from '../assets/moviecatalog.png';
 
 const Portfolio = () => {
 
@@ -32,10 +33,10 @@ const Portfolio = () => {
         },
         {
             id: 4,
-            src: sweeterVocab,
-            name: 'Sweeter Vocabulary',
-            link: 'https://ucoks-sweet-project.glitch.me',
-            linkText: 'sweet-vocabulary.glitch.me',
+            src: moviecatalog,
+            name: 'Movie Catalog',
+            link: 'https://react-netflix-clone-b9719.web.app/profile',
+            linkText: 'movie-catalog-netflix-clone-app',
         },
         {
             id: 5,
