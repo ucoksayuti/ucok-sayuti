@@ -2,7 +2,6 @@ import React from 'react'
 import legacy from '../assets/legacy.png';
 import swiftRoom from '../assets/swift-room.png';
 import harmonyResort from '../assets/harmony-resort.png';
-import sweeterVocab from '../assets/sweet-vocab.png';
 import bucketList from '../assets/bucket-list.png';
 import sumaculinary from '../assets/sumaculinary.png';
 import moviecatalog from '../assets/moviecatalog.png';
